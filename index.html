@@ -16,9 +16,10 @@
   <link rel="shortcut icon" href="image/logo-Oumaima.jpg">
   <link rel="stylesheet" href="css/style.css">
 
+
   <style>
     :root{
-      --terra:#b35330b4;      /* terracotta principale */
+      --terra:#995c45a3;      /* terracotta principale */
       --terra-dark:#933d23; /* survol/hover */
       --ink:#222;           /* titres */
       --text:#333;          /* corps */
@@ -27,12 +28,15 @@
     }
 
     /* ====== NAVBAR (terracotta) ====== */
-    .navbar.white-nav-top{
-      background:var(--terra);
-      border:none;
-      box-shadow:0 2px 0 rgba(0,0,0,.06);
-      min-height:60px;
-    }
+.navbar,
+.navbar.white-nav-top,
+.navbar.top-nav-collapse,
+.navbar.navbar-default,
+.navbar.navbar-inverse {
+  background: var(--terra) !important;
+
+  box-shadow: 0 2px 0 rgba(0,0,0,.06) !important;
+}
     .navbar.white-nav-top .navbar-brand{
       color:var(--light);
       padding:20px 15px;
