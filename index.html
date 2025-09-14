@@ -206,7 +206,7 @@
     new WOW({offset:0, mobile:true, live:true}).init();
     // Marquer l’onglet actif d’après l’URL
     (function() {
-      var path = location.pathname.split("/").pop() || "Home.html";
+      var path = location.pathname.split("/").pop() || "index.html";
       var $link = $('#mainNav .nav > li > a[href="' + path + '"]');
       $link.parent().addClass('active');
     })();
