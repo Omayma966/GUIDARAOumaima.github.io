@@ -1,1 +1,3 @@
-video/
+video/*
+!video/pfe.mp4
+
