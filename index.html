@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GUIDARA Oumaima</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,200i,300,400,500i,600&display=swap" rel="stylesheet">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+  <!-- Bootstrap CSS (v3) -->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="shortcut icon" href="image/logo-Oumaima.jpg">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root{
+      --terra:#b35330b4;      /* terracotta principale */
+      --terra-dark:#933d23; /* survol/hover */
+      --ink:#222;           /* titres */
+      --text:#333;          /* corps */
+      --muted:#666;         /* sous-titres */
+      --light:#fff;         /* blanc */
+    }
+
+    /* ====== NAVBAR (terracotta) ====== */
+    .navbar.white-nav-top{
+      background:var(--terra);
+      border:none;
+      box-shadow:0 2px 0 rgba(0,0,0,.06);
+      min-height:60px;
+    }
+    .navbar.white-nav-top .navbar-brand{
+      color:var(--light);
+      padding:20px 15px;
+      font-weight:700;
+      letter-spacing:.5px;
+      text-transform:uppercase;
+    }
+    .navbar.white-nav-top .navbar-toggle{ border-color:rgba(255,255,255,.6); margin-top:12px; }
+    .navbar.white-nav-top .navbar-toggle .icon-bar{ background:#fff; }
+
+    .navbar.white-nav-top .nav>li>a{
+      color:#ffece5;                  /* liens */
+      padding:20px 16px;
+      font-weight:600;
+    }
+    .navbar.white-nav-top .nav>li>a:hover,
+    .navbar.white-nav-top .nav>li>a:focus{
+      color:#fff;
+      background:transparent;
+    }
+    /* Soulignement discret au survol/actif */
+    .navbar.white-nav-top .nav>li>a:after{
+      content:""; display:block; height:2px; background:transparent; transform:scaleX(0);
+      transition:transform .25s ease, background .25s ease;
+    }
+    .navbar.white-nav-top .nav>li>a:hover:after{ background:rgba(255,255,255,.85); transform:scaleX(1); }
+    .navbar.white-nav-top .nav>li.active>a,
+    .navbar.white-nav-top .nav>li.active>a:focus{
+      color:#fff;
+      background:transparent;
+    }
+    .navbar.white-nav-top .nav>li.active>a:after{ background:#fff; transform:scaleX(1); }
+
+    /* Dropdown */
+    .navbar.white-nav-top .dropdown-menu{
+      background:var(--terra);
+      border:none;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    .navbar.white-nav-top .dropdown-menu>li>a{
+      color:#ffece5; padding:10px 16px; font-weight:600;
+    }
+    .navbar.white-nav-top .dropdown-menu>li>a:hover{ background:var(--terra-dark); color:#fff; }
+
+    /* ====== HERO ====== */
+    .hero{ padding:120px 0 80px; }
+    .hero h1{
+      color:var(--ink);
+      font-weight:800;
+      font-size:48px;
+      line-height:1.15;
+      margin-bottom:10px;
+    }
+    .hero h1 .accent{ color:var(--terra); }
+    .hero .subtitle{ color:var(--muted); font-size:16px; margin-bottom:12px; font-weight:600; }
+    .hero p.lead{ color:var(--text); font-size:18px; line-height:1.6; max-width:760px; margin-bottom:22px; }
+    .portrait{ border-radius:24px; overflow:hidden; box-shadow:0 16px 48px rgba(0,0,0,.15); }
+
+    /* ====== BOUTONS ====== */
+    .btn-primary{ background:var(--terra); border-color:var(--terra); }
+    .btn-primary:hover{ background:var(--terra-dark); border-color:var(--terra-dark); }
+    .btn-default{ background:#fff; color:var(--text); border-color:#ddd; }
+    .btn-default:hover{ background:#f7f7f7; }
+    .btn-success{ background:#10b981; border-color:#10b981; }
+
+    /* ====== FOOTER (terracotta) ====== */
+    footer{ background:var(--terra); color:#ffece5; padding:18px 0; }
+    footer a{ color:#fff; text-decoration:underline; }
+
+    /* ====== DIVERS ====== */
+    body{ padding-top:70px; } /* espace sous navbar fixe */
+    @media (max-width:991px){
+      .hero{ padding-top:100px; }
+      .hero h1{ font-size:38px; }
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar">
+  <div id="preloader"><div id="status">&nbsp;</div></div>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-fixed-top white-nav-top" role="navigation">
+      <div class="container-fluid">
+        <div class="site-nav-wrapper">
+          <div class="navbar-header">
+            <!-- Bouton mobile -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav">
+              <span class="sr-only">Basculer la navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Marque -->
+            <a class="navbar-brand" href="Home.html">GUIDARA Oumaima</a>
+          </div>
+
+          <!-- Menu -->
+          <div class="container">
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="nav navbar-nav pull-right">
+                <li class="active"><a href="Home.html">Accueil</a></li>
+                <li><a href="cv.html">À propos</a></li>
+                <li><a href="Parcours.html">Parcours</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                  <a href="CV_GUIDARAOumaima.pdf" download><i class="fa fa-download"></i> Télécharger le CV</a>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /.container -->
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Ends -->
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="row middle-xs">
+        <!-- Col texte -->
+        <div class="col-md-7 wow fadeInUp" data-wow-delay=".1s">
+          <h1>Bonjour, je suis <span class="accent">Oumaima Guidara</span></h1>
+          <div class="subtitle">Développeuse Web & Mobile • .NET • Spring Boot • Flutter</div>
+          <p class="lead">
+            Ingénieure en informatique, je conçois et développe des applications performantes et maintenables
+            côté web et mobile. Polyvalente et orientée qualité, j’aime transformer des besoins métiers en
+            solutions élégantes, en m’appuyant sur des pratiques agiles et une culture d’amélioration continue.
+          </p>
+          <div class="cta">
+            <a href="cv.html" class="btn btn-primary"><i class="fa fa-user"></i> Voir mon profil</a>
+            <a href="CV_GUIDARAOumaima.pdf" class="btn btn-default" target="_blank" rel="noopener">
+              <i class="fa fa-file-pdf-o"></i> Voir le CV (PDF)
+            </a>
+            <a href="CV_GUIDARAOumaima.pdf" class="btn btn-success" download>
+              <i class="fa fa-download"></i> Télécharger le CV
+            </a>
+          </div>
+        </div>
+
+        <!-- Col image -->
+        <div class="col-md-5 wow fadeInRight" data-wow-delay=".15s">
+          <div class="portrait">
+            <img src="image/DSC00152.jpg" alt="GUIDARA Oumaima" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>© 2025 <strong>GUIDARA Oumaima</strong>.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap/bootstrap.js"></script>
+  <script src="js/owl-carousel/owl.carousel.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW({offset:0, mobile:true, live:true}).init();
+    // Marquer l’onglet actif d’après l’URL
+    (function() {
+      var path = location.pathname.split("/").pop() || "Home.html";
+      var $link = $('#mainNav .nav > li > a[href="' + path + '"]');
+      $link.parent().addClass('active');
+    })();
+  </script>
+</body>
+</html>
